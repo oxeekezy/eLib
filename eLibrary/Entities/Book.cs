@@ -24,9 +24,9 @@ namespace eLibrary.Entities
             _owner = owner;
         }
 
-        public void SetReader(User reader) 
+        public void SetReader(User currentReader) 
         {
-            _currentReader = reader;
+            _currentReader = currentReader;
         }
 
 
