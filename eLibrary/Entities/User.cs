@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eLibrary.Entities
 {
-    internal class User
+    public class User
     {
         private string _firstName;
         private string _lastName;
@@ -15,7 +15,7 @@ namespace eLibrary.Entities
 
         public User(string firstName, string lastName, string userName, string password) 
         {
-            _firstName= firstName;
+            _firstName = firstName;
             _lastName = lastName;
             _userName = userName;
             _password = password;
@@ -28,5 +28,12 @@ namespace eLibrary.Entities
 
             return false;
         }
+
+        public string FirstName { get { return _firstName;} }
+        public string LastName { get { return _lastName;} }
+        public string UserName { get { return _userName;} }
+        public string Password { get { return _password;} }
+
+
     }
 }
