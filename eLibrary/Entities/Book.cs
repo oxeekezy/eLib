@@ -9,14 +9,14 @@ namespace eLibrary.Entities
     internal class Book
     {
         private string _name;
-        private int _year;
         private string _author;
-        private string _condition;
+        private int _year;
         private User _owner;
         private User _currentReader;
         private Status _status;
+        private Condition _condition;
 
-        public Book(string name, int year, string author, string condition, User owner, Status status)
+        public Book(string name, int year, string author, Condition condition, User owner, Status status)
         {
             _name = name;
             _year = year;
@@ -30,7 +30,5 @@ namespace eLibrary.Entities
         {
             _currentReader = currentReader;
         }
-
-
     }
 }

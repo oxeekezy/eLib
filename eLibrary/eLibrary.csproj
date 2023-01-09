@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Entities\Book.cs" />
+    <Compile Include="Entities\Condition.cs" />
     <Compile Include="Entities\Status.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Form1.cs">
