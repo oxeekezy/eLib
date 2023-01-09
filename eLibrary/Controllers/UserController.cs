@@ -51,10 +51,7 @@ namespace eLibrary.Controllers
 
             string formatedLine = $"{user.FirstName};{user.LastName};{user.UserName};{user.Password}";
 
-            using (StreamWriter sw = new StreamWriter(Path.Combine(_mainPath, filename))) 
-            {
-                sw.WriteLine(formatedLine);
-            }  
+            File.AppendAllText(Path.Combine(_mainPath, filename), formatedLine);
 
             return true;
         }
