@@ -30,5 +30,10 @@ namespace eLibrary.Entities
         {
             _currentReader = currentReader;
         }
+
+        public string GetBookForSave() 
+        {
+            return $"{_owner.UserName};{_status};{_name};{_author};{_year};{_condition};{_currentReader}";
+        }
     }
 }

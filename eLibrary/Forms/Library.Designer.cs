@@ -30,6 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.userLbl = new System.Windows.Forms.Label();
+            this.AddBookBtn = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -51,11 +56,60 @@
             this.userLbl.TabIndex = 1;
             this.userLbl.Text = "Username";
             // 
+            // AddBookBtn
+            // 
+            this.AddBookBtn.Location = new System.Drawing.Point(12, 427);
+            this.AddBookBtn.Name = "AddBookBtn";
+            this.AddBookBtn.Size = new System.Drawing.Size(91, 23);
+            this.AddBookBtn.TabIndex = 2;
+            this.AddBookBtn.Text = "Add your book";
+            this.AddBookBtn.UseVisualStyleBackColor = true;
+            this.AddBookBtn.Click += new System.EventHandler(this.AddBookBtn_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(12, 65);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(269, 356);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(115, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "My books";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(324, 65);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(408, 356);
+            this.richTextBox2.TabIndex = 5;
+            this.richTextBox2.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(508, 49);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Library";
+            // 
             // Library
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(745, 456);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.AddBookBtn);
             this.Controls.Add(this.userLbl);
             this.Controls.Add(this.label1);
             this.Name = "Library";
@@ -70,5 +124,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label userLbl;
+        private System.Windows.Forms.Button AddBookBtn;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Label label3;
     }
 }
