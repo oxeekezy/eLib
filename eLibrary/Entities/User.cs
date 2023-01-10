@@ -21,6 +21,11 @@ namespace eLibrary.Entities
             _password = password;
         }
 
+        public User() 
+        {
+            //Test method
+        }
+
         public bool ConfirmPassword(string input) 
         {
             if(input.Equals(_password))

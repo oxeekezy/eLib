@@ -9,10 +9,10 @@ using System.Windows.Forms;
 
 namespace eLibrary.Controllers
 {
-    internal class UserController
+    public class UserController
     {
         private string _usersFile = "users.bs";
-        private string _mainPath = Directory.GetCurrentDirectory();
+        //private string _mainPath = Directory.GetCurrentDirectory();
         public User Login(string username, string password)
         {
             string userData = FindInfo(username);
@@ -51,7 +51,7 @@ namespace eLibrary.Controllers
 
             string formatedLine = $"{user.FirstName};{user.LastName};{user.UserName};{user.Password}";
 
-            using (StreamWriter sw = new StreamWriter(Path.Combine(_mainPath, filename), append: true)) 
+            using (StreamWriter sw = new StreamWriter(filename, append: true)) 
             {
                 sw.WriteLine(formatedLine); 
             }
@@ -61,7 +61,7 @@ namespace eLibrary.Controllers
 
         public string FindInfo(string username) 
         {
-            using (StreamReader sr = new StreamReader(Path.Combine(_mainPath, _usersFile))) 
+            using (StreamReader sr = new StreamReader(_usersFile)) 
             {
                 while (!sr.EndOfStream) 
                 {

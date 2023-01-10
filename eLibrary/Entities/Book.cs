@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eLibrary.Entities
 {
-    internal class Book
+    public class Book
     {
         private string _name;
         private string _author;
@@ -24,6 +24,11 @@ namespace eLibrary.Entities
             _condition = condition;
             _owner = owner;
             _status = status;
+        }
+
+        public Book() 
+        {
+            //Test method
         }
 
         public void SetReader(User currentReader) 
