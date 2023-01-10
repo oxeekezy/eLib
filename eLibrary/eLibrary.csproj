@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Entities\Book.cs" />
     <Compile Include="Entities\Condition.cs" />

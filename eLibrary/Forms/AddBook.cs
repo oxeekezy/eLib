@@ -46,13 +46,14 @@ namespace eLibrary.Forms
                              (Condition)conditionBox.SelectedItem, _user, Status.Free);
 
             SaveBook(Path.Combine(_mainPath,_booksFile), _book);
+
             MessageBox.Show("Book succesfuly added!");
             Close();
         }
 
         private void SaveBook(string path, Book book) 
         {
-            using (StreamWriter sw = new StreamWriter(path))
+            using (StreamWriter sw = new StreamWriter(path, append:true))
             {
                 sw.WriteLine(book.GetBookForSave());
             }
